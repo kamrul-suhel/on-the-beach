@@ -72,7 +72,7 @@ const FilterComponent = () => {
                     <li className={renderActiveClass('price')}
                         onClick={() => handleSortProduct('price')}>
                         <Typography component="p" variant="body1">Sort by <strong>price</strong></Typography>
-                        <StarIcon className="colorGray"/>
+                        <img src={'/images/pound.svg'} className="colorGray filterSvg"/>
                     </li>
 
                     <li className={renderActiveClass('rating')}

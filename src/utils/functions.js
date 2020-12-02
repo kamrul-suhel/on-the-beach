@@ -17,7 +17,7 @@ export default {
                 data.sort(function(a, b) {
                     const ratingA = parseFloat(a.rating);
                     const ratingB = parseFloat(b.rating);
-                    return (ratingA < ratingB) ? -1 : (ratingA > ratingB) ? 1 : 0;
+                    return (ratingA > ratingB) ? -1 : (ratingA < ratingB) ? 1 : 0;
                 })
                 break
 
