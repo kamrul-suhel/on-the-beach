@@ -1,0 +1,96 @@
+.productWrapper{
+  background: #ffffff;
+  margin-bottom: 30px;
+
+  .productImageSection{
+    padding-right:30px;
+    display: flex;
+    position:relative;
+
+    .productImage{
+      flex:1;
+      background-repeat: no-repeat;
+      background-position:center;
+      background-size: cover;
+    }
+
+    .toggleOverView{
+      position:absolute;
+      bottom: 0;
+      left:0;
+      width:270px;
+      padding: 12px 20px;
+      background: #fff;
+      cursor:pointer;
+      transition:all ease-in-out .3s;
+
+      p{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      .accordion{
+        transition: all ease-in-out .3s;
+
+        &.rotate{
+          transform:rotate(90deg)
+        }
+      }
+    }
+  }
+
+  .productContent{
+    padding: 15px 24px 15px 0;
+    h2, h4{
+      margin: 0;
+    }
+
+    h2{
+      color:$primaryColor;
+    }
+    h4{
+      color:$grayColor;
+      font-weight:normal;
+    }
+
+    .rating{
+      margin-top: 5px;
+      color: $accentColor;
+      font-size:18px;
+    }
+  }
+
+  .bookNow{
+    background:$accentColor;
+    color: $accentTextColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top:18px;
+    padding:15px;
+
+    p{
+      margin: 0;
+
+      &.price{
+        font-size:30px;
+        font-weight:bolder;
+      }
+    }
+  }
+
+  .productOverview{
+    padding: 12px 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+
+    &.show{
+      max-height: 200px;
+    }
+  }
+}

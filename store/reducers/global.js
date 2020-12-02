@@ -1,7 +1,8 @@
 import {HYDRATE} from 'next-redux-wrapper';
 
 const initialState = {
-    name: 'App name'
+    name: 'On the beach',
+    description: 'Description for SEO'
 }
 
 const global = (state = {...initialState}, action) => {

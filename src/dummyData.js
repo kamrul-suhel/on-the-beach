@@ -1,5 +1,6 @@
 export default [
     {
+        id: 1,
         title: 'Iberostar Grand Salome',
         subtitle: 'Costa Adeje, Tenerife',
         shortDescription: '',
@@ -8,40 +9,42 @@ export default [
         adults: 3,
         children: 2,
         infant: 1,
-        date: new Date(),
+        date: '3/7/2019',
         durationInDay: 7,
         departingFrom: 'East Midlands',
         price: 1136.50,
-        posterImage: ''
+        image: '/images/hotel-image-1.png'
     },
 
     {
+        id: 2,
         title: 'Aguamarina Golf Hotel',
         subtitle: 'Costa Adeje, Tenerife',
         shortDescription: '',
         description: '',
-        rating: 4,
+        rating: 2,
         adults: 3,
         children: 2,
-        date: new Date(),
+        date: 27/6/2019,
         durationInDay: 7,
         departingFrom: 'East Midlands',
-        price: 1136.50,
-        posterImage: ''
+        price: 696.80,
+        image: '/images/hotel-image-2.png'
     },
 
     {
+        id: 3,
         title: 'Last Piramides Resort',
         subtitle: 'Costa Adeje, Tenerife',
         shortDescription: '',
         description: '',
-        rating: 4,
+        rating: 3,
         adults: 3,
         children: 2,
-        date: new Date(),
+        date: '3/7/2019',
         durationInDay: 7,
         departingFrom: 'East Midlands',
-        price: 1136.50,
-        posterImage: ''
+        price: 499.99,
+        image: '/images/hotel-image-3.png'
     }
 ]

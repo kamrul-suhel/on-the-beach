@@ -1,0 +1,39 @@
+#filterSection{
+
+  .filterHeader{
+    background:$primaryColor;
+    color: $primaryTextColor;
+    display:flex;
+    padding:24px;
+    justify-content: space-between;
+  }
+
+  .filterOption{
+    background: $primaryTextColor;
+    color: $primaryColor;
+
+    ul{
+      list-style:none;
+      padding: 0;
+      margin:0;
+
+      li{
+        padding: 24px;
+        display:flex;
+        justify-content: space-between;
+        border-bottom: 3px solid #8c99c0;
+        cursor:pointer;
+        transition:all ease-in-out .3s;
+
+        &.active{
+          background:$primaryColor;
+          color: $primaryTextColor;
+        }
+
+        &:last-child{
+          border:none;
+        }
+      }
+    }
+  }
+}

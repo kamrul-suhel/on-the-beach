@@ -1,0 +1,12 @@
+body{
+  background-image: url('/images/background.png'); // We can use css Linear gradient
+  background-repeat: repeat-x;
+}
+
+.colorGray{
+  color: #d4d4d4;
+}
+
+.textPrimary{
+  color: $primaryColor;
+}

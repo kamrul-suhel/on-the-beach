@@ -17,7 +17,7 @@ module.export = {
     async rewrites() {
         return [
             {
-                source: '/about',
+                source: '*',
                 destination: '/',
             },
         ]

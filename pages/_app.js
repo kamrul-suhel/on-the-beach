@@ -5,6 +5,7 @@ import Header from "../components/layouts/header"
 import {ThemeProvider} from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from '../src/theme'
+import '../src/scss/index.scss'
 
 function MyApp({Component, pageProps}) {
     return <Fragment>
