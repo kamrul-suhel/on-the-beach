@@ -35,7 +35,7 @@ const ProductItem = (props) => {
         return (
             <Fragment>
                 <Typography component="p">
-                    {moment(product.date).format('ll')} for {product.durationInDay} days
+                    {moment(product.date, 'DD-MM-YYYY').format('ll')} for {product.durationInDay} days
                 </Typography>
 
                 <Typography component="p">
