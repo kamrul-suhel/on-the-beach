@@ -1,8 +1,9 @@
 import {HYDRATE} from 'next-redux-wrapper';
 
 const initialState = {
-    price: null,
-    rating: null
+    price: true,
+    rating: null,
+    alphabetic: null
 }
 
 const filter = (state = {...initialState}, action) => {
@@ -17,6 +18,7 @@ const filter = (state = {...initialState}, action) => {
             return {
                 ...state,
                 rating: null,
+                alphabetic: null,
                 price: action.payload
             }
 
@@ -24,7 +26,16 @@ const filter = (state = {...initialState}, action) => {
             return {
                 ...state,
                 price: null,
+                alphabetic: null,
                 rating: action.payload
+            }
+
+        case 'SET_FILTER_BY_ALPHABETIC':
+            return {
+                ...state,
+                price: null,
+                alphabetic: action.payload,
+                rating: null
             }
 
         case 'RESET_FILTER_OPTIONS':

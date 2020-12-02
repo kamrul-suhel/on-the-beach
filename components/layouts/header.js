@@ -1,8 +1,10 @@
 import React from 'react';
-export default function header() {
+const Header = () => {
     return (
-        <div>
-            Header section
-        </div>
+        <section id="header">
+
+        </section>
     )
 }
+
+export default Header

@@ -9,52 +9,66 @@ const FilterComponent = () => {
     const dispatch = useDispatch()
     const filterByPrice = useSelector(state => state.filter.price)
     const filterByRating = useSelector(state => state.filter.rating)
+    const filterByAlphabetic = useSelector(state => state.filter.alphabetic)
 
     const handleSortProduct = (sortType) => {
 
-        if(sortType === 'price'){
+        if (sortType === 'price') {
 
-            const sortOrder = filterByPrice === 'asc' ? 'desc' : 'asc'
             dispatch({
-                type:'SET_FILTER_BY_PRICE',
-                payload: sortOrder
+                type: 'SET_FILTER_BY_PRICE',
+                payload: true
             })
         }
 
-        if(sortType === 'rating'){
-            const sortOrder = filterByRating === 'asc' ? 'desc' : 'asc'
+        if (sortType === 'rating') {
             dispatch({
-                type:'SET_FILTER_BY_RATING',
-                payload: sortOrder
+                type: 'SET_FILTER_BY_RATING',
+                payload: true
+            })
+        }
+
+        if (sortType === 'alphabetic') {
+            dispatch({
+                type: 'SET_FILTER_BY_ALPHABETIC',
+                payload: true
             })
         }
     }
 
     const renderActiveClass = (type) => {
-        if(
+        if (
             type === 'price' &&
             filterByPrice
-        ){
+        ) {
             return 'active'
         }
 
-        if(
+        if (
             type === 'rating' &&
             filterByRating
-        ){
+        ) {
+            return 'active'
+        }
+
+        if (
+            type === 'alphabetic' &&
+            filterByAlphabetic
+        ) {
             return 'active'
         }
     }
 
     return (
         <aside id="filterSection">
-            <div className="filterHeader">
-                <Typography component="p" variant="body1">Sort <strong>alphabetically</strong></Typography>
-                <SortByAlphaIcon/>
-            </div>
-
             <div className="filterOption">
                 <ul>
+                    <li className={renderActiveClass('alphabetic')}
+                        onClick={() => handleSortProduct('alphabetic')}>
+                        <Typography component="p" variant="body1">Sort <strong>alphabetically</strong></Typography>
+                        <SortByAlphaIcon/>
+                    </li>
+
                     <li className={renderActiveClass('price')}
                         onClick={() => handleSortProduct('price')}>
                         <Typography component="p" variant="body1">Sort by <strong>price</strong></Typography>

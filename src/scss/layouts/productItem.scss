@@ -23,11 +23,12 @@
       background: #fff;
       cursor:pointer;
       transition:all ease-in-out .3s;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
 
       p{
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
+        min-width:210px;
       }
 
       .accordion{
@@ -84,13 +85,18 @@
   }
 
   .productOverview{
-    padding: 12px 20px;
-    max-height: 0;
     overflow: hidden;
-    transition: max-height .3s ease;
+    transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+    height: auto;
+    max-height: 9999px;
 
-    &.show{
-      max-height: 200px;
+    &.collapsed{
+      max-height: 0;
+      transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+    }
+
+    .productOverviewContent{
+      padding: 20px
     }
   }
 }

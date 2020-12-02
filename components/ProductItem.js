@@ -18,7 +18,7 @@ const ProductItem = (props) => {
     const renderRating = () => {
         const rating = parseInt(product.rating)
         let response = []
-        for(let i = 0; i < rating; i++){
+        for (let i = 0; i < rating; i++) {
             response.push(<StarIcon className="rating" key={i}/>)
         }
         return response
@@ -59,7 +59,7 @@ const ProductItem = (props) => {
     }
 
     const renderReadMore = () => {
-        if(overview){
+        if (overview) {
             return ' less '
         }
 
@@ -77,8 +77,10 @@ const ProductItem = (props) => {
                     <div className="toggleOverView"
                          onClick={handleToggleOverview}>
                         <Typography variant="body1" className="textPrimary" component="p">
-                            Read {renderReadMore()}  about this hotel <KeyboardArrowRightIcon className={`accordion ${overview && 'rotate'}`}/>
+                            Read {renderReadMore()} about this hotel
                         </Typography>
+                        <KeyboardArrowRightIcon
+                            className={`accordion ${overview && 'rotate'}`}/>
                     </div>
                 </Grid>
 
@@ -101,11 +103,18 @@ const ProductItem = (props) => {
                     </div>
                 </Grid>
 
-                <Grid item xs={12} className={`productOverview ${overview && 'show'}`}>
-                    <h4 className="textPrimary">Overview</h4>
-                    <Typography variant="body1" componet="p">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad architecto atque consequatur distinctio harum laudantium nemo, non officia, praesentium quasi quia, unde veniam. Animi debitis distinctio facilis mollitia velit.
-                    </Typography>
+                <Grid item xs={12}>
+                    <article className={`productOverview ${!overview && 'collapsed'}`}>
+                        <div className="productOverviewContent">
+                            <Typography component="h3" variant="h6" className="textPrimary">Overview</Typography>
+
+                            <Typography variant="body1" componet="p">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad architecto atque consequatur
+                                distinctio harum laudantium nemo, non officia, praesentium quasi quia, unde veniam. Animi
+                                debitis distinctio facilis mollitia velit.
+                            </Typography>
+                        </div>
+                    </article>
                 </Grid>
             </Grid>
         </article>

@@ -5,6 +5,8 @@ import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import FilterComponent from "../components/FilterComponent";
 import Products from "../components/Products";
+import Header from "../components/layouts/header";
+
 
 export default function Home() {
     const global = useSelector(store => store.global)
@@ -15,6 +17,8 @@ export default function Home() {
           <meta name="description" content={global.description && global.description || 'Some description'}/>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+        <Header/>
 
         <Container component="section">
             <Grid container
